@@ -39,37 +39,44 @@
 		</div>
 	</nav>
 	<!-- here is content -->
-	<img src="imgs/activities/本祭扁橫幅.jpg" alt="本祭扁橫幅" title="本祭扁橫幅"  width="200%">
+	<img src="imgs/activities/本祭扁橫幅.jpg" alt="本祭扁橫幅" title="本祭扁橫幅"  width="100%">
 	<br>
 	<button onclick="scrollRight()">RIGHT------------------</button>
 	<br>
-<div class="scrollmenu" id="SC">
+	<div class="scrollmenu" id="SC">
   <button href="#friends">Friends</button>
   <button href="#partners">Partners</button>
   <button href="#people">People</button>
   <button href="#work">Work</button>
   <button href="#house">House</button>
 </div>
+
+<div data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
+		<div><h3>1</h3></div>
+		<div><h3>2</h3></div>
+		<div><h3>3</h3></div>
+		<div><h3>4</h3></div>
+		<div><h3>5</h3></div>
+		<div><h3>6</h3></div>
+	</div>
 		
 	
 
 
-	
-	  </div>
-	  
+
+
+
+
+
+
 	  <script>
 
-			var scroll2 = document.getElementsById("SC");
 
 			function scrollRight() {
-				document.getElementsById("SC").scrollBy(10,0);
+				window.scrollBy(10,0);
 				
 			}
-			function scrollLefts() {
-				document.body.scrollTop = 0;
-  			document.documentElement.scrollTop = 0;
-			}	
-			var k = 0;
+			<script>
 			
 
 

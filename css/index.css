@@ -1,0 +1,54 @@
+
+.slide-button{
+    background-color: #4CAF50; 
+    width:260px;
+    height:260px;
+    margin: auto;
+
+}
+
+div.scrollmenu {
+    width: 1100px;
+    margin-left:10%;
+    margin-right:10%;
+    background-color:blue;
+    overflow: auto;
+    white-space: nowrap;
+  }
+  
+div.scrollmenu button {
+    display: inline-block;
+    color: green;
+    text-align: center;
+    padding: 14px;
+    margin:5px;
+    width:260px;
+    height:260px;
+    text-decoration: none;
+}
+
+div.scrollmenu button:hover {
+    background-color: pink;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+} /* this targets the default scrollbar (compulsory) */
+
+::-webkit-scrollbar-track {
+background-color: yellow;
+} /* the new scrollbar will have a flat appearance with the set background color */
+ 
+::-webkit-scrollbar-thumb {
+      background-color: orange; 
+} /* this will style the thumb, ignoring the track */
+ 
+::-webkit-scrollbar-button {
+      background-color: #7c2929;
+} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+ 
+::-webkit-scrollbar-corner {
+      background-color: lightcoral;
+} /* if both the vertical and the horizontal bars appear, then perhaps the right bottom corner also needs to be styled */
+
+

@@ -1,0 +1,97 @@
+.member-container {
+  padding-top: 150px;
+  width: 1051px;
+  min-height: 100px;
+  overflow: hidden;
+  margin: 0px auto;
+  display: block; }
+  .member-container .title-container {
+    width: 100%;
+    min-height: 40px;
+    position: relative;
+    display: block; }
+  .member-container .title {
+    width: 139px;
+    height: 34px;
+    margin: 0px 15px;
+    padding: 3px;
+    background-color: #CB264B;
+    color: #480402;
+    float: left;
+    font-size: 20px;
+    font-family: "Microsoft JhengHei", "PingFangSC-Regular";
+    letter-spacing: 1.5px; }
+    .member-container .title .en {
+      font-size: 10px;
+      margin-top: 3px;
+      font-family: "Open Sans";
+      letter-spacing: 0px; }
+  .member-container .member-block-container {
+    display: block;
+    width: 100%;
+    min-height: 225px;
+    overflow: hidden; }
+    .member-container .member-block-container .member-block {
+      width: 175px;
+      height: 225px;
+      display: block;
+      float: left; }
+      .member-container .member-block-container .member-block .img-container {
+        width: 127px;
+        height: 127px;
+        display: block;
+        margin: 19px auto 8px; }
+        .member-container .member-block-container .member-block .img-container img {
+          border-radius: 50%;
+          width: 127px;
+          height: 127px; }
+      .member-container .member-block-container .member-block .name {
+        width: 175px;
+        text-align: center;
+        font-family: "Microsoft JhengHei", "PingFangSC-Regular";
+        font-size: 20px;
+        color: #FF3030;
+        letter-spacing: 1.55px; }
+      .member-container .member-block-container .member-block .bg {
+        width: 175px;
+        text-align: center;
+        font-family: "Microsoft JhengHei", "PingFangSC-Regular";
+        font-size: 12px;
+        color: #FF3030;
+        letter-spacing: 1.55px;
+        margin-top: 5px; }
+
+@media all and (max-width: 1052px) {
+  .member-container {
+    width: 875px; } }
+@media all and (max-width: 877px) {
+  .member-container {
+    width: 700px; } }
+@media all and (max-width: 703px) {
+  .member-container {
+    width: 525px; } }
+@media all and (max-width: 528px) {
+  .member-container {
+    width: 350px; } }
+@media all and (max-width: 350px) {
+  .member-container {
+    width: 300px; }
+    .member-container .title {
+      width: 113px; }
+    .member-container .member-block-container .member-block {
+      width: 150px; }
+      .member-container .member-block-container .member-block .img-container {
+        width: 120px;
+        height: 120px;
+        display: block;
+        margin: 19px auto 8px; }
+        .member-container .member-block-container .member-block .img-container img {
+          border-radius: 50%;
+          width: 120px;
+          height: 120px; }
+      .member-container .member-block-container .member-block .name {
+        width: 150px; }
+      .member-container .member-block-container .member-block .bg {
+        width: 150px; } }
+
+/*# sourceMappingURL=member.css.map */

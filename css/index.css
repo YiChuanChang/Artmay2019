@@ -55,7 +55,7 @@ div.scrollmenu button:hover {
 #square_detail {
     position: relative;
     display: block;
-    width: 100%;
+    width: 1440px;
     margin: 0 auto;
     overflow: hidden;
     white-space: nowrap;

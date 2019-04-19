@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>	
-    <title>Artmay 2019</title>
-    <meta http-equiv="content-Type" content="text/html; charset=utf-8">
+		<title>Artmay 2019</title>
+		<meta http-equiv="content-Type" content="text/html; charset=utf-8">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7">
     <meta name="title" content="Artmay 2019">
@@ -20,10 +20,14 @@
     <link rel="icon" href="" type="image/png">
     <link rel="image_src" type="image/jpeg" href="">
     <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
     <link href="css/reset.css" rel="stylesheet">
     <link href="css/general.css" rel="stylesheet">
-    <link href="css/index.css" rel="stylesheet">
+		<link href="css/index.css" rel="stylesheet">
+		
+		<!--slick:-->
+		<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 </head>
 
 <body>
@@ -39,53 +43,55 @@
 		</div>
 	</nav>
 	<!-- here is content -->
-	<img src="imgs/activities/本祭扁橫幅.jpg" alt="本祭扁橫幅" title="本祭扁橫幅"  width="100%">
-	<br>
-	<button onclick="scrollRight()">RIGHT------------------</button>
-	<br>
-	<div class="scrollmenu" id="SC">
-  <button href="#friends">Friends</button>
-  <button href="#partners">Partners</button>
-  <button href="#people">People</button>
-  <button href="#work">Work</button>
-  <button href="#house">House</button>
-</div>
+	
+	
+	<div class="wrapper">
+		<img src="imgs/index/網頁橫幅.jpg" alt="本祭扁橫幅" title="本祭扁橫幅">
 
-<div data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
-		<div><h3>1</h3></div>
-		<div><h3>2</h3></div>
-		<div><h3>3</h3></div>
-		<div><h3>4</h3></div>
-		<div><h3>5</h3></div>
-		<div><h3>6</h3></div>
+		<div class="scrollmenu" onmouseover="scroll_to_squares(1)">
+		
+
+		<div class="view" onclick="click1(1)" >
+			<img  src="imgs/index/square1.png" />
+			<div class="mask" ></div>
+						
+		</div>
+		<div class="view" onclick="click1(2)" >
+				<img src="imgs/index/square2.png" />
+				<div class="mask"></div>
+		</div>
+		<div class="view" onclick="click1(3)" >
+				<img src="imgs/index/square3.png" />
+				<div class="mask"></div>
+		</div>
+		<div class="view" onclick="click1(4)" >
+				<img src="imgs/index/square4.png" />
+				<div class="mask"></div>
+		</div>
+		<div class="view" onclick="click1(5)">
+				<img src="imgs/index/square5.png"/>
+				<div class="mask"></div>
+		</div>
+		<div class="view" onclick="click1(6)">
+				<img src="imgs/index/square6.png"/>
+				<div class="mask"></div>
+		</div>
+		
+			
+	</div>
+
+	<div id="square_detail" >
+		<img src="imgs/index/工作坊橫幅2.png" alt="工作坊橫幅" title="工作坊橫幅">
+	</div>	
+	<br>
+	<!------------------------------------------------------------>
+	
+		
 	</div>
 		
 	
-
-
-
-
-
-
-
-
-	  <script>
-
-
-			function scrollRight() {
-				window.scrollBy(10,0);
-				
-			}
-			<script>
-			
-
-
-
-
-
-
-
-
+	
+	
 
 
 
@@ -93,9 +99,24 @@
 
 	
 	
-	<div id="particles-js"></div>
-	<dic class='tmp-content'></dic>
-	<div id="particles-js"></div>
+
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="slick/slick.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.scrollmenu').slick({
+				infinite: true,
+				slidesToShow: 4,
+				slidesToScroll: 1
+			});
+		});
+
+	</script>
+
+
 	<footer>
 		<div class='link-wrap'>
 			<a href='' class='email'></a>
@@ -104,6 +125,8 @@
 		<div class='copyright'>All Copyrights Reserved</div>
 	</footer>
 </body>
+
 <script src="vendor/particles.min.js"></script>
 <script src="js/general.js"></script>
+<script src="js/index.js"></script>
 </html>

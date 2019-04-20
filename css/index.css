@@ -16,20 +16,32 @@ html {
 
 }*/
 
-div.scrollmenu {
-    /*width:1100px;*/
-    margin-left:10%;
+.scrollmenu {
+    width:76%;
+    margin-left:10% !important;
     margin-right:10%;
 }
   
-div.scrollmenu button {
+.scrollmenu button {
     width:40px;
     height:200px;
 
 }
 
+/*----------------------------------------------------*/
+.scrollmenu2 {
+    width:76%;
+    margin-left:10% !important;
+    margin-right:10%;
+}
+  
+.scrollmenu2 button {
+    width:40px;
+    height:200px;
 
+}
 
+/*-----------------------------------------------------*/
 .view {
     width: 260px ;
     height: 260px;
@@ -65,24 +77,35 @@ div.scrollmenu button {
 .square_detail  {
     width: 100%;
     background:rgba(177,42,75);
+    background-image:linear-gradient(to top,rgb(104, 16, 38),rgba(177,42,75));
     padding:20px;
 
 }
+.square_detail2 {
+    width: 100%;
+    background:rgba(177,42,75);
+    background-image:linear-gradient(to top,rgb(104, 16, 38),rgba(177,42,75));
+    padding:20px;
 
+}
 
 .detail_img{
     width: 100%;
 
 }
+.detail_img2{
+    width: 100%;
+
+}
 .detail_image{
-    width: 60%;
+    width: 50%;
     float: left;
     margin-right: 20px;
 }
 
 .detail_text {
     padding: 8px;
-    width: 30%;
+    width: 40%;
     float: left;
 
 }
@@ -118,10 +141,16 @@ p {
     line-height: 20px;
 }
 
+.title {
+    font-size: 20px;
+    color: #cabec1;
+    margin-left: 5%;
+}
+
 
 /*------------------------------------------------------------------*/
 .arrow_up {
-    margin-left: 58%;
+    margin-left: 56%;
     width: 0;
     height: 0;
     border-style: solid;

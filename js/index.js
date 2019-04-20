@@ -6,18 +6,24 @@ var show_detail = document.getElementsByClassName("mask");
 
 
 function scroll_to_squares(num) {
-    if (num == 1) {
-        console.log("YES1");
+    if (wdth > 1000) {
+        console.log("YES");
+        if (num == 1) {
 
-        window.scrollTo(0,750);
+            window.scrollTo(0,750);
+        }
+        else if (num == 2) {
+        
+
+            window.scrollTo(0,1450);
+        }
+        
     }
-    else if (num == 2) {
-        console.log("YES2");
-        window.scrollTo(0,1500);
+    else {
+        console.log("NO");
     }
-    else{
-        console.log("NO!");
-    }
+    
+    
 
 }
 

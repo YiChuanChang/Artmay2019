@@ -225,7 +225,7 @@
 		
 		<div onmouseover="scroll_to_squares(2)">
 		<br>
-		<h1 class="title">儀式/活動</h1><br>
+		<h1 class="title">儀式/活動</h1>
 				<div class="scrollmenu2" >
 				
 						<div class="view">
@@ -339,24 +339,24 @@
 								<div class="detail_text">
 										
 									<h1>集體幻／喚愛</h1>
-									<h2 >5/23(四)　23:30～00:20 湖心亭</h2>
+									<h3 >5/23(四)　23:30～00:20 湖心亭</h3>
 									
-									<p>自我填補  自我安慰  自我救贖</p>
-									<p>然後靜靜地</p>
-									<p>等待時間沖淡這一切</p>
-									<p>原本   都是習慣一個人獨自經歷這些</p>
-									<p>這次</p> 
-									<p>失落之眾<br>頹廢之眾</p>
-									<p>這些支離破碎的「我」</p>
-									<p>將一同<br>召喚那些曾自以為是愛的愛</p>
-									<p>將一同<br>幻想那些回不去的人間時光</p>
-									<p>彷彿<br>這一切都與慾望無關了<br>只是想要一個答案罷了</p>
-									<p>彷彿<br>不再是一個人了<br>儘管各自始終還是想著各自的事情</p>
-									<p>但那又如何</p>
-									<p>只是想要擺脫匱乏罷了<br>只是希望這些都是真的罷了</p>
-									<p>這是一場道別儀式<br>是真是假   不必較真<br>因為它<br>跨公私  跨虛實  跨離別  跨盈缺</p>
-									<p>在儀式之中尋求解放<br>祭奠那些「未完」、「未滿」、「未止」</p>
-									<p>這些虛假會比真實更真實</p>
+									<h3>自我填補  自我安慰  自我救贖</h3>
+									<h3>然後靜靜地</h3>
+									<h3>等待時間沖淡這一切</h3>
+									<h3>原本   都是習慣一個人獨自經歷這些</h3>
+									<h3>這次</h3> 
+									<h3>失落之眾<br>頹廢之眾</h3>
+									<h3>這些支離破碎的「我」</h3>
+									<h3>將一同<br>召喚那些曾自以為是愛的愛</h3>
+									<h3>將一同<br>幻想那些回不去的人間時光</h3>
+									<h3>彷彿<br>這一切都與慾望無關了<br>只是想要一個答案罷了</h3>
+									<h3>彷彿<br>不再是一個人了<br>儘管各自始終還是想著各自的事情</h3>
+									<h3>但那又如何</h3>
+									<h3>只是想要擺脫匱乏罷了<br>只是希望這些都是真的罷了</h3>
+									<h3>這是一場道別儀式<br>是真是假   不必較真<br>因為它<br>跨公私  跨虛實  跨離別  跨盈缺</h3>
+									<h3>在儀式之中尋求解放<br>祭奠那些「未完」、「未滿」、「未止」</h3>
+									<h3>這些虛假會比真實更真實</h3>
 								</div>					
 						
 						
@@ -505,9 +505,17 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" src="slick/slick.min.js"></script>
 	<script type="text/javascript">
-	
+		var wdth;// window width
 		$(document).ready(function(){
 			window.scrollTo(0,0);
+
+
+			$(window).resize(function() {
+				wdth=$(window).width();
+				console.log(wdth);
+
+				$("span").text(wdth);
+			});
 
 			$('.detail_img').slick({
 				infinite: true,
@@ -518,7 +526,6 @@
 				asNavFor: '.scrollmenu'
 			});
 		
-
 			$('.scrollmenu').slick({
 				prevArrow: '<span class="slick-prev"></span>', 
 				nextArrow: '<span class="slick-next"></span>',

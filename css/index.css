@@ -1,0 +1,145 @@
+
+html {
+    scroll-behavior: smooth;
+}
+*:focus {
+    outline: 0;
+    outline: none;
+}
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+    
+/*@media only screen and (max-width: 600px) {
+
+}*/
+
+div.scrollmenu {
+    /*width:1100px;*/
+    margin-left:10%;
+    margin-right:10%;
+}
+  
+div.scrollmenu button {
+    width:40px;
+    height:200px;
+
+}
+
+
+
+.view {
+    width: 260px ;
+    height: 260px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    cursor: default;
+ }
+ .view .mask{
+    width: 260px;
+    height: 260px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+ }
+ .view button {
+    display: block;
+    position: relative;
+ }
+
+.mask:hover {
+    outline:none;
+    background-image:linear-gradient(to bottom,  rgba(0, 0, 0, 0), rgba(149,43,62,0.2),rgba(177,42,75));
+
+}
+ 
+
+
+
+
+/*------------------------------------------------------------------*/
+.square_detail  {
+    width: 100%;
+    background:rgba(177,42,75);
+    padding:20px;
+
+}
+
+
+.detail_img{
+    width: 100%;
+
+}
+.detail_image{
+    width: 60%;
+    float: left;
+    margin-right: 20px;
+}
+
+.detail_text {
+    padding: 8px;
+    width: 30%;
+    float: left;
+
+}
+
+*{
+    font-family: "MingLiU" ,Arial, Helvetica, sans-serif;
+}
+h1 {
+    font-size: 20px;
+    color: #cabec1;
+}
+h2 {
+    color: rgba(255, 184, 184, 0.57);
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1.63px;
+    line-height: 20px;
+
+}
+h3 { 
+    color: #ffeecc;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.55px;
+    line-height: 20px;
+}
+p { 
+    text-indent: 2em;
+    color: #ffeecc;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.55px;
+    line-height: 20px;
+}
+
+
+/*------------------------------------------------------------------*/
+.arrow_up {
+    margin-left: 58%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 20px 20px 20px;
+    border-color: transparent transparent rgba(177,42,75) ;
+
+}
+/*------------------------------------------------------------------*/
+a:link{
+    float: right;
+    color: #ffeecc;
+
+}
+a:visited {
+    color: #ffeecc;
+
+}
+a:hover {
+    color: #ecad2e;
+
+}

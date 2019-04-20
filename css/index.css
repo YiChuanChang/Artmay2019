@@ -75,16 +75,16 @@ html {
 
 /*------------------------------------------------------------------*/
 .square_detail  {
-    /*display: none;*/
     width: 100%;
     background:rgba(177,42,75);
+    background-image:linear-gradient(to top,rgb(104, 16, 38),rgba(177,42,75));
     padding:20px;
 
 }
 .square_detail2 {
-    /*display: none;*/
     width: 100%;
     background:rgba(177,42,75);
+    background-image:linear-gradient(to top,rgb(104, 16, 38),rgba(177,42,75));
     padding:20px;
 
 }

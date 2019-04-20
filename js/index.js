@@ -6,7 +6,7 @@ var show_detail = document.getElementsByClassName("mask");
 
 
 function scroll_to_squares(num) {
-    /*if (num == 1) {
+    if (num == 1) {
         console.log("YES1");
 
         window.scrollTo(0,750);
@@ -17,7 +17,7 @@ function scroll_to_squares(num) {
     }
     else{
         console.log("NO!");
-    }*/
+    }
 
 }
 

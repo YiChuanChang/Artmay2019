@@ -1,0 +1,150 @@
+@import general
+h1, h2
+	color: $main-color
+	text-align: center
+h1
+	font-size: 36px
+	// font-weight: bold
+	letter-spacing: 1.75px
+	line-height: 29px
+	padding-top: 140px
+	font-family: 'Microsoft JhengHei', 'PingFangSC-Regular'
+h2
+	font-size: 18px
+	font-family: 'Open Sans'
+	line-height: 29px
+	margin-top: 5px
+
+p
+	max-width: 700px
+	padding: 0px 15px
+	font-size: 14px
+	color: #C8C8C8
+	letter-spacing: 0.7px
+	line-height: 22px
+	margin: 12px auto
+
+.title-wrap
+	font-size: 24px	
+	line-height: 0.83
+	letter-spacing: 0.7px
+	color: $main-color
+	max-width: 700px
+	padding: 0px 15px
+	margin: 40px auto 10px
+	img
+		// margin-bottom: 30px
+
+.content-container
+	max-width: 1200px
+	padding: 15px
+	margin: 35px auto
+	.text-wrap
+		width: 55%
+		display: inline-block
+		.title
+			font-size: 24px	
+			line-height: 0.83
+			letter-spacing: 0.7px
+			color: $main-color
+			padding-left: 40px
+			margin-bottom: 20px
+		p
+			padding: 0px 0px 0px 40px
+	img
+		width: 45%
+		float: left
+		margin: 40px 0px
+
+.sins-container
+	width: 100%
+	min-height: 100px
+	overflow: hidden
+	background-color: $main-color
+
+	.sins-block-container
+		max-width: 960px
+		margin: 0px auto
+		padding: 45px 0px
+		.sins-block
+			width: 200px
+			height: 500px
+			padding: 0px 20px
+			float: left
+			.title
+				font-size: 18px
+				color: #C8C8C8
+				letter-spacing: 0.87px
+				line-height: 18px
+				margin-bottom: 5px
+				font-weight: bold
+				text-align: center
+				.en
+					font-family: 'Open Sans'
+					// float: left
+					display: inline-block
+					font-size: 18px
+					margin-left: 5px
+			.subtitle
+				text-align: center
+				color: #C8C8C8
+			.detail
+				color: #B0B0B0
+			.subtitle, .detail
+				font-size: 12px
+				letter-spacing: 0.58px
+				line-height: 18px
+			img
+				margin: 10px 0px 5px
+				width: 100%
+
+@media all and (max-width: 962px)
+	.sins-container
+		.sins-block-container
+			max-width: 720px
+
+
+@media all and (max-width: 722px)
+	.sins-container
+		.sins-block-container
+			max-width: 480px
+
+@media all and (max-width: 482px)
+	.sins-container
+		.sins-block-container
+			max-width: 360px
+			.sins-block
+				width: 170px
+				padding: 0px 5px
+				height: 460px
+
+@media all and (max-width: 370px)
+	.sins-container
+		.sins-block-container
+			max-width: 320px
+			.sins-block
+				width: 150px
+				padding: 0px 5px
+				height: 420px
+
+@media all and (max-width: 900px)
+	
+	.content-container
+		.text-wrap
+			width: 100%
+			.title
+				max-width: 700px
+				margin: 30px auto 10px
+				padding: 0px
+			p
+				padding: 0px
+		img
+			width: 100%
+			float: left
+			margin: 0px 0px
+
+@media all and (max-width: 330px)
+	
+	.title-wrap
+		img
+			display: none

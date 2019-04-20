@@ -6,21 +6,22 @@ var show_detail = document.getElementsByClassName("mask");
 
 
 function scroll_to_squares(num) {
-    if (num == 1) {
+    /*if (num == 1) {
+        console.log("YES1");
+
         window.scrollTo(0,750);
     }
     else if (num == 2) {
-        window.scrollTo(0,1000);
+        console.log("YES2");
+        window.scrollTo(0,1500);
     }
+    else{
+        console.log("NO!");
+    }*/
 
 }
 
 
-function bye() {
-    show_detail.style.display = "none";
-    console.log("bye");
-
-}
 function openup() {
     document.getElementsByClassName("square_detail")[0].style.display = "block";
     
@@ -31,3 +32,35 @@ function openup2() {
     
 }
 
+
+
+$('.slider-for').each(function(key, item) {
+
+    var sliderIdName = 'slider' + key;
+    var sliderNavIdName = 'sliderNav' + key;
+  
+    this.id = sliderIdName;
+    $('.slider-nav')[key].id = sliderNavIdName;
+  
+    var sliderId = '#' + sliderIdName;
+    var sliderNavId = '#' + sliderNavIdName;
+  
+    $(sliderId).slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      asNavFor: sliderNavId
+    });
+  
+    $(sliderNavId).slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      asNavFor: sliderId,
+      dots: true,
+      arrows: true,
+      centerMode: false,
+      focusOnSelect: true
+    });
+  
+  });

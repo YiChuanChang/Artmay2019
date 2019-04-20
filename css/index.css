@@ -16,26 +16,26 @@ html {
 
 }*/
 
-div.scrollmenu {
-    /*width:1100px;*/
-    margin-left:10%;
+.scrollmenu {
+    width:76%;
+    margin-left:10% !important;
     margin-right:10%;
 }
   
-div.scrollmenu button {
+.scrollmenu button {
     width:40px;
     height:200px;
 
 }
 
 /*----------------------------------------------------*/
-div.scrollmenu2 {
-    width:1100px;
-    margin-left:10%;
+.scrollmenu2 {
+    width:76%;
+    margin-left:10% !important;
     margin-right:10%;
 }
   
-div.scrollmenu2 button {
+.scrollmenu2 button {
     width:40px;
     height:200px;
 
@@ -93,6 +93,10 @@ div.scrollmenu2 button {
     width: 100%;
 
 }
+.detail_img2{
+    width: 100%;
+
+}
 .detail_image{
     width: 50%;
     float: left;
@@ -140,7 +144,7 @@ p {
 .title {
     font-size: 20px;
     color: #cabec1;
-    margin-left: 40px;
+    margin-left: 5%;
 }
 
 

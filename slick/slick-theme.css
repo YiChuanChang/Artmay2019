@@ -26,9 +26,7 @@
     top: 50%;
 
     display: block;
-
-    width: 20px;
-    height: 20px;
+    height: 100%;
     padding: 0;
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
@@ -39,7 +37,8 @@
     color: transparent;
     border: none;
     outline: none;
-    background: transparent;
+    width: 40px; /*my adding*/
+    z-index: 0;
 }
 .slick-prev:hover,
 .slick-prev:focus,
@@ -48,8 +47,30 @@
 {
     color: transparent;
     outline: none;
-    background: transparent;
 }
+
+/*my adding*/
+.slick-prev:hover,
+.slick-prev:focus
+{
+    background-image:linear-gradient(to left,rgba(0, 0, 0, 0) 20%,rgba(177,42,75));
+
+}
+
+.slick-next:hover,
+.slick-next:focus
+{
+    background-image:linear-gradient(to right,rgba(0, 0, 0, 0) 20%,rgba(177,42,75));
+}
+
+
+
+/*my adding finish*/
+
+
+
+
+
 .slick-prev:hover:before,
 .slick-prev:focus:before,
 .slick-next:hover:before,
@@ -66,12 +87,13 @@
 .slick-prev:before,
 .slick-next:before
 {
+
     font-family: 'slick';
     font-size: 20px;
     line-height: 1;
 
     opacity: .75;
-    color: white;
+    color: transparent;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -79,7 +101,9 @@
 
 .slick-prev
 {
-    left: -25px;
+    left: -75px;
+    background-image:linear-gradient(to left,rgba(0, 0, 0, 0), rgba(149,43,62,0.7),rgba(177,42,75));
+
 }
 [dir='rtl'] .slick-prev
 {
@@ -97,7 +121,9 @@
 
 .slick-next
 {
-    right: -25px;
+    right: -45px;
+    background-image:linear-gradient(to right,rgba(0, 0, 0, 0), rgba(149,43,62,0.7),rgba(177,42,75));
+    
 }
 [dir='rtl'] .slick-next
 {

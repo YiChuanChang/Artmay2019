@@ -1,8 +1,8 @@
 /* Slider */
 .slick-slider
 {
+    margin: 0 27px;
     position: relative;
-
     display: block;
     box-sizing: border-box;
 
@@ -20,13 +20,13 @@
 
 .slick-list
 {
+    margin: 0 -27px;
     position: relative;
 
     display: block;
     overflow: hidden;
 
-    margin: 0;
-    padding: 0;
+    padding: 0 !important;
 }
 .slick-list:focus
 {
@@ -89,6 +89,7 @@
 .slick-slide img
 {
     display: block;
+
 }
 .slick-slide.slick-loading img
 {

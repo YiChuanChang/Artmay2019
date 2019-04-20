@@ -2,27 +2,36 @@
 html {
     scroll-behavior: smooth;
 }
-  
+*:focus {
+    outline: 0;
+    outline: none;
+}
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+    
+/*@media only screen and (max-width: 600px) {
+
+}*/
+
 div.scrollmenu {
-    position: relative;
-    width: 1050px;
-    margin: 0 auto;
-    overflow: hidden;
-    white-space: nowrap;
+    /*width:1100px;*/
+    margin-left:10%;
+    margin-right:10%;
 }
   
 div.scrollmenu button {
-    width:80px;
-    height:260px;
-    text-decoration: none;
+    width:40px;
+    height:200px;
+
 }
 
-div.scrollmenu button:hover {
-    background-image: linear-gradient(90deg,rgba(149,43,62, 0.2), rgba(149,43,62));
-}
+
 
 .view {
-    width: 260px;
+    width: 260px ;
     height: 260px;
     float: left;
     overflow: hidden;
@@ -42,9 +51,10 @@ div.scrollmenu button:hover {
     position: relative;
  }
 
- .mask:hover {
-    border:260px solid ;
-    border-image:linear-gradient(to bottom,  rgba(0, 0, 0, 0), rgba(149,43,62,0.2),rgba(177,42,75));
+.mask:hover {
+    outline:none;
+    background-image:linear-gradient(to bottom,  rgba(0, 0, 0, 0), rgba(149,43,62,0.2),rgba(177,42,75));
+
 }
  
 
@@ -52,19 +62,36 @@ div.scrollmenu button:hover {
 
 
 /*------------------------------------------------------------------*/
-#square_detail {
-    position: relative;
-    display: block;
-    width: 1440px;
+.square_detail  {
+    width: 100%;
     margin: 0 auto;
-    overflow: hidden;
-    white-space: nowrap;
     background:rgba(177,42,75);
+
+    /*overflow-y: hidden;
+	max-height: 500px; 
+
+	transition-property: all;
+	transition-duration: .5s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);*/
 }
-#square_detail img{
+
+.detail_img{
+    width: 60%;
+}
+.detail_image{
+    width: 60%;
     margin: 30px;
-    width: 70%;
 }
 
 
+/*------------------------------------------------------------------*/
+.arrow_up {
+    margin-left: 58%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 20px 20px 20px;
+    border-color: transparent transparent rgba(177,42,75) ;
+
+}
 /*------------------------------------------------------------------*/

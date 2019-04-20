@@ -46,78 +46,151 @@
 	
 	
 	<div class="wrapper">
-		<img src="imgs/index/網頁橫幅.jpg" alt="本祭扁橫幅" title="本祭扁橫幅">
-
-		<div class="scrollmenu" onmouseover="scroll_to_squares(1)">
+		<img src="imgs/index/網頁橫幅.jpg" alt="本祭扁橫幅" title="本祭扁橫幅" width="100%">
+		<br>
+		<br>
+		<br>
+		<div class="scrollmenu" onmouseover="scroll_to_squares(1)" onclick="show()">
 		
 
-		<div class="view" onclick="click1(1)" >
+		<div class="view">
 			<img  src="imgs/index/square1.png" />
 			<div class="mask" ></div>
 						
 		</div>
-		<div class="view" onclick="click1(2)" >
+
+		<div class="view">
 				<img src="imgs/index/square2.png" />
 				<div class="mask"></div>
 		</div>
-		<div class="view" onclick="click1(3)" >
+		<div class="view">
 				<img src="imgs/index/square3.png" />
 				<div class="mask"></div>
 		</div>
-		<div class="view" onclick="click1(4)" >
+		<div class="view">
 				<img src="imgs/index/square4.png" />
 				<div class="mask"></div>
 		</div>
-		<div class="view" onclick="click1(5)">
+		<div class="view">
 				<img src="imgs/index/square5.png"/>
 				<div class="mask"></div>
 		</div>
-		<div class="view" onclick="click1(6)">
+		<div class="view">
 				<img src="imgs/index/square6.png"/>
 				<div class="mask"></div>
 		</div>
-		<div class="view" onclick="click1(7)">
+		<div class="view">
 				<img src="imgs/index/square7.png"/>
 				<div class="mask"></div>
 		</div>
 		
 			
-	</div>
-
-	<div id="square_detail" >
-		<img src="imgs/index/工作坊橫幅2.png" alt="工作坊橫幅" title="工作坊橫幅">
+		</div>
+	
+	<div class="arrow_up"></div>
+	
+	<div class="square_detail" >
+		<div class="detail_img" >
+			<img class="detail_image"src="imgs/index/工作坊橫幅2.png" alt="工作坊橫幅" title="工作坊橫幅">
+			<img class="detail_image"src="imgs/index/工作坊橫幅3.png" alt="工作坊橫幅" title="工作坊橫幅">
+			<img class="detail_image"src="imgs/index/直撥快樂.png" alt="直撥快樂" title="直撥快樂">
+			<img class="detail_image"src="imgs/index/解壓縮.png" alt="解壓縮" title="解壓縮">
+			<img class="detail_image"src="imgs/index/廢泡.png" alt="廢泡" title="廢泡">
+			<img class="detail_image"src="imgs/index/前夜祭.png" alt="前夜祭" title="前夜祭">
+			<img class="detail_image"src="imgs/index/工作坊橫幅1.png" alt="工作坊橫幅" title="工作坊橫幅">
+		</div>
 	</div>	
 	<br>
 	<!------------------------------------------------------------>
-	
 		
 	</div>
 		
 	
-	
-	
-
-
-
-
-
-	
-	
-
-
-
-
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" src="slick/slick.min.js"></script>
 	<script type="text/javascript">
+	
 		$(document).ready(function(){
-			$('.scrollmenu').slick({
-				infinite: true,
-				slidesToShow: 4,
-				slidesToScroll: 1
-			});
-		});
+			window.scrollTo(0,0);
 
+			$('.detail_img').slick({
+				infinite: true,
+				arrows:false,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				fade: true,
+				asNavFor: '.scrollmenu'
+			});
+			if($(window).width() > 900)
+			{
+				console.log(">900!");
+
+				$('.scrollmenu').slick({
+					prevArrow: '<span class="slick-prev"></span>', 
+					nextArrow: '<span class="slick-next"></span>',
+					slidesToShow: 4,
+					slidesToScroll: 1,
+					asNavFor: '.detail_img',
+					centerMode: true,
+					focusOnSelect: true
+					
+				});
+			} else {
+				console.log("<900!");
+
+				$('.scrollmenu').slick({
+					prevArrow: '<span class="slick-prev"></span>', 
+					nextArrow: '<span class="slick-next"></span>',
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					asNavFor: '.detail_img',
+					centerMode: true,
+					focusOnSelect: true
+					
+				});
+		}
+			
+
+		});
+		/*$('.detail_img').slick({
+			infinite: true,
+			arrows:false,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			fade: true,
+			asNavFor: '.scrollmenu'
+		});
+		if($(window).width() > 900) {
+			console.log(">900(2)!");
+				$('.scrollmenu').slick({
+					prevArrow: '<span class="slick-prev"></span>', 
+					nextArrow: '<span class="slick-next"></span>',
+					slidesToShow: 4,
+					slidesToScroll: 1,
+					asNavFor: '.detail_img',
+					centerMode: true,
+					focusOnSelect: true
+					
+				});
+		} 
+		else {
+			console.log(">900!(2)");
+
+			$('.scrollmenu').slick({
+
+				prevArrow: '<span class="slick-prev"></span>', 
+				nextArrow: '<span class="slick-next"></span>',
+				slidesToShow: 2,
+				slidesToScroll: 1,
+				asNavFor: '.detail_img',
+				centerMode: true,
+				focusOnSelect: true
+				
+			});
+		}*/
+
+	
+		
 	</script>
 
 

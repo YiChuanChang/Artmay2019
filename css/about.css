@@ -22,8 +22,8 @@ nav {
       margin: -10px auto 0px;
       width: 40px; }
       nav.sticky .logo-wrap .logo {
-        height: 40px;
-        width: 40px;
+        height: 39px;
+        width: 39px;
         background-size: 40px 40px; }
   nav .logo-wrap {
     display: block;
@@ -39,7 +39,7 @@ nav {
       width: 70px;
       display: inline-block;
       background: url("../imgs/general/logo.png") no-repeat;
-      background-size: 70px 70px;
+      background-size: 69px 69px;
       -moz-transition: all 0.3s 0s;
       -o-transition: all 0.3s 0s;
       -webkit-transition: all 0.3s 0s;
@@ -90,7 +90,7 @@ nav {
 
 footer {
   width: 100%;
-  height: 100px;
+  min-height: 100px;
   background-color: black;
   display: block;
   position: relative;
@@ -98,23 +98,28 @@ footer {
   footer .link-wrap {
     display: block;
     position: relative;
-    width: 100px;
+    width: 168px;
     height: 40px;
-    margin: 16px auto 10px; }
+    margin: 16px auto 16px; }
     footer .link-wrap a {
       width: 40px;
       height: 40px;
-      display: inline-block; }
+      margin: 0px 8px;
+      display: inline-block;
+      opacity: 0.7;
+      float: right;
+      -moz-transition: all 0.3s 0s;
+      -o-transition: all 0.3s 0s;
+      -webkit-transition: all 0.3s 0s;
+      transition: all 0.3s 0s; }
+      footer .link-wrap a:hover {
+        opacity: 1; }
       footer .link-wrap a.email {
-        float: left;
         background: url("../imgs/general/email.png") no-repeat; }
-        footer .link-wrap a.email:hover {
-          background: url("../imgs/general/email-hover.png") no-repeat; }
       footer .link-wrap a.fb {
-        float: right;
         background: url("../imgs/general/fb.png") no-repeat; }
-        footer .link-wrap a.fb:hover {
-          background: url("../imgs/general/fb-hover.png") no-repeat; }
+      footer .link-wrap a.ig {
+        background: url("../imgs/general/ig.png") no-repeat; }
   footer .copyright {
     display: block;
     height: 20px;
@@ -123,6 +128,35 @@ footer {
     color: #C01249;
     font-size: 14px; }
 
+@media all and (max-width: 480px) {
+  nav.sticky .logo-wrap {
+    margin: -10px 20px 0px;
+    width: 40px; }
+    nav.sticky .logo-wrap .logo {
+      height: 40px;
+      width: 40px;
+      background-size: 40px 40px; }
+  nav .logo-wrap {
+    margin: -15px 20px 0px;
+    float: left;
+    width: 50px; }
+    nav .logo-wrap .logo {
+      height: 50px;
+      width: 50px;
+      background-size: 49px 49px; }
+  nav .nav_item {
+    font-size: 18px; }
+    nav .nav_item:nth-of-type(1) {
+      width: 90px;
+      float: right;
+      margin-right: 10px; }
+    nav .nav_item:nth-of-type(2) {
+      width: 63px;
+      float: right;
+      margin-right: 15px; }
+
+  footer {
+    height: 60px; } }
 h1, h2 {
   color: #C01249;
   text-align: center; }
@@ -132,6 +166,7 @@ h1 {
   letter-spacing: 1.75px;
   line-height: 29px;
   padding-top: 140px;
+  margin-top: 0px;
   font-family: "Microsoft JhengHei", "PingFangSC-Regular"; }
 
 h2 {

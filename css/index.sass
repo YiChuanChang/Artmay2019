@@ -1,0 +1,276 @@
+@import general
+.head-img-container
+	position: absolute
+	top: 0px
+	height: 100vh
+	min-width: 100vw
+	display: block
+	object-fit: cover
+	background: url("../imgs/index/網頁橫幅.png") no-repeat
+	background-size: cover
+	background-position: center bottom
+
+	.main-logo-wrapper
+		width: 100%
+		position: absolute
+		display: block
+		top: 150px
+		img
+			margin: 0px auto
+			display: block
+
+	.arrow-down-wrapper
+		width: 100%
+		position: absolute
+		display: block
+		bottom: 30px
+		img
+			margin: 0px auto
+			display: block
+		.bounce
+			animation: bounce 2s infinite
+
+@keyframes bounce 
+	0%, 20%, 50%, 80%, 100%
+		transform: translateY(0)
+	40%
+		transform: translateY(-30px)
+	60%
+		transform: translateY(-15px)
+.index-container
+	width: 100vw
+	margin: 0px auto 80px
+	padding-top: 100vh
+	.title
+		width: 1120px
+		font-size: 20px
+		letter-spacing: 2px
+		color: $main-color
+		padding-left: 50px
+		margin: 50px auto 10px
+	.activity-block-container
+		width: 1120px
+		margin: 0px auto
+		min-height: 100px
+		overflow: hidden
+		display: block
+		scroll-direction: horizontal
+		overflow: scroll
+		&::-webkit-scrollbar
+			display: none
+		.scroller
+			&.block-4
+				width: 1120px
+
+			&.block-3
+				width: 840px
+
+			&.block-2
+				width: 560px
+
+			.activity-block
+				width: 260px
+				height: 260px
+				margin: 0px 10px
+				float: left
+				overflow: hidden
+				position: relative
+				cursor: pointer
+
+				&.activate
+					&:after
+						background-color: rgba(192, 82, 117, 0)
+					.mask
+						outline:none
+						bottom: 0px
+
+				&:after
+					content: ""
+					display: inline-block
+					position: absolute
+					width: 260px
+					height: 260px
+					top: 0px
+					left: 0px
+					background-color: rgba(192, 82, 117, 0.3)
+					transition: all 0.5s 0s
+				&:hover
+					&:after
+						background-color: rgba(192, 82, 117, 0)
+					
+					.mask
+						outline:none
+						bottom: 0px
+
+				.mask
+					width: 260px
+					height: 260px
+					position: absolute
+					overflow: hidden
+					bottom: -100px
+					left: 0
+					transition: all 0.2s 0s
+					background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(149,43,62,0.2), rgba(177,42,75, 1))
+					.title
+						position: absolute
+						bottom: 30px
+						font-size: 18px
+						left: 10px
+						margin: 0px
+						letter-spacing: 1.4px
+						color: #ffeecc
+						display: block
+						padding: 0px
+					.time
+						position: absolute
+						bottom: 10px
+						font-size: 12px
+						left: 10px
+						letter-spacing: 1.4px
+						color: #dbd2b0
+						display: block
+	.activity-detail
+		width: 100vw
+		max-height: 0px
+		overflow: hidden
+		background-color: black
+		margin-top: 25px
+		border: 0px solid $main-color
+		@include transition(all 0.5s 0s)
+		&.activate
+			border: 2px solid $main-color
+			max-height: 1200px
+
+		.detail-container
+			width: 90vw
+			margin: 25px auto
+			min-height: 100%
+			img
+				width: 60%
+			.info-container
+				width: 37%
+				float: right
+				padding-bottom: 30px
+				.join
+					// display: none
+					float: right
+					background-color: white
+					margin-top: -40px
+					img
+						float: left
+						height: 14px
+						width: 26px
+					a
+						text-decoration: none
+						color: #ddaabb
+						&:hover
+							color: #ffebcc
+				.title
+					font-size: 20px
+					letter-spacing: 1.5px
+					color: #cabec1
+					margin: 0px
+					padding: 0px
+					margin-bottom: 2px
+				.info
+					font-size: 12px
+					letter-spacing: 1.5px
+					color: #ffeecc
+					margin-bottom: 30px
+					line-height: 18px
+				.loca_n_time
+					font-size: 14px
+					letter-spacing: 2px
+					color: rgba(255, 184, 184, 0.5)
+					margin-bottom: 10px
+
+
+@media all and (max-width: 1125px)
+	.index-container
+		.title
+			width: 840px
+			padding-left: 10px
+		.activity-block-container
+			width: 840px
+			.scroller
+				&.block-4
+					width: 1120px
+
+				&.block-3
+					width: 840px
+
+				&.block-2
+					width: 560px
+
+		.activity-detail
+			.detail-container
+				width: 100vw
+				margin: 5px auto
+				img
+					width: 100%
+				.info-container
+					width: auto
+					padding: 10px 15px 30px 
+					float: none
+
+@media all and (max-width: 843px)
+	.index-container
+		.title
+			width: 750px
+			padding-left: 0px
+		.activity-block-container
+			width: 800px
+			.scroller
+				&.block-4
+					width: 800px
+
+				&.block-3
+					width: 600px
+
+				&.block-2
+					width: 400px
+
+				.activity-block
+					width: 180px
+					height: 180px
+
+					img
+						width: 180px
+						height: 180px
+
+@media all and (max-width: 805px)
+	.index-container
+		.title
+			width: 600px
+			padding-left: 0px
+		.activity-block-container
+			width: 600px
+
+@media all and (max-width: 605px)
+	.index-container
+		.title
+			width: 360px
+			padding-left: 0px
+		.activity-block-container
+			width: 360px
+			.scroller
+				&.block-4
+					width: 720px
+
+				&.block-3
+					width: 540px
+
+				&.block-2
+					width: 360px
+
+				.activity-block
+					width: 160px
+					height: 160px
+					.mask
+						.title
+							font-size: 16px
+
+					img
+						width: 160px
+						height: 160px
+						margin-top: 5px

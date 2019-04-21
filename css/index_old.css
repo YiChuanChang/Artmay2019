@@ -1,0 +1,251 @@
+
+html {
+    scroll-behavior: smooth;
+}
+*:focus {
+    outline: 0;
+    outline: none;
+}
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+    
+/*@media only screen and (max-width: 600px) {
+
+}*/
+
+.head-img-container{
+    position: absolute;
+    top: 0px;
+    height: 100vh;
+    min-width: 100vw;
+    display: block;
+    object-fit: cover;
+    background: url("../imgs/index/網頁橫幅.png") no-repeat;
+    background-size: cover;
+}
+.head-img-container .main-logo-wrapper{
+    width: 100%;
+    position: absolute;
+    display: block;
+    top: 150px;
+}
+.head-img-container .main-logo-wrapper img{
+    margin: 0px auto;
+    display: block
+}
+.head-img-container .arrow-down-wrapper{
+    width: 100%;
+    position: absolute;
+    display: block;
+    bottom: 30px;
+}
+.head-img-container .arrow-down-wrapper img{
+    margin: 0px auto;
+    display: block;
+}
+
+.head-img-container .arrow-down-wrapper .bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.activity-block-container{
+    width: 1120px;
+    margin: 10px auto;
+    min-height: 100px;
+    overflow: hidden;
+}
+.index-container{
+    width: 100%;
+    min-height:100vh;
+    padding-top: 100vh;
+    display: block
+    position: relative;
+}
+/*.scrollmenu {
+    width:76%;
+    margin-left:10% !important;
+    margin-right:10%;
+}*/
+  
+.scrollmenu button {
+    width:40px;
+    height:200px;
+
+}
+
+/*----------------------------------------------------*/
+.scrollmenu2 {
+    width:76%;
+    margin-left:10% !important;
+    margin-right:10%;
+}
+  
+.scrollmenu2 button {
+    width:40px;
+    height:200px;
+
+}
+
+/*-----------------------------------------------------*/
+.view {
+    width: 260px ;
+    height: 260px;
+    margin: 0px 5px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    cursor: default;
+ }
+ .view:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(192, 82, 117, 0.3);
+    transition: all 0.5s 0s;
+ } 
+ .view:hover:after {
+    background-color: rgba(192, 82, 117, 0);
+ }
+ .view .mask{
+    width: 260px;
+    height: 260px;
+    position: absolute;
+    overflow: hidden;
+    bottom: -100px;
+    left: 0;
+    transition: all 0.5s 0s;
+    background-image:linear-gradient(to bottom,  rgba(0, 0, 0, 0), rgba(149,43,62,0.2),rgba(177,42,75));
+ }
+
+ .view button {
+    display: block;
+    position: relative;
+ }
+
+ .view:hover .mask {
+    outline:none;
+    bottom: 0px;
+}
+ 
+
+
+
+
+/*------------------------------------------------------------------*/
+.square_detail  {
+    width: 100%;
+    background:rgba(177,42,75);
+    background-image:linear-gradient(to top,rgb(104, 16, 38),rgba(177,42,75));
+    padding:20px;
+
+}
+.square_detail2 {
+    width: 100%;
+    background:rgba(177,42,75);
+    background-image:linear-gradient(to top,rgb(104, 16, 38),rgba(177,42,75));
+    padding:20px;
+
+}
+
+.detail_img{
+    width: 100%;
+
+}
+.detail_img2{
+    width: 100%;
+
+}
+.detail_image{
+    width: 50%;
+    float: left;
+    margin-right: 20px;
+}
+
+.detail_text {
+    padding: 8px;
+    width: 40%;
+    float: left;
+
+}
+
+*{
+    font-family: "MingLiU" ,Arial, Helvetica, sans-serif;
+}
+h1 {
+    font-size: 20px;
+    color: #cabec1;
+}
+h2 {
+    color: rgba(255, 184, 184, 0.57);
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1.63px;
+    line-height: 20px;
+
+}
+h3 { 
+    color: #ffeecc;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.55px;
+    line-height: 20px;
+}
+p { 
+    text-indent: 2em;
+    color: #ffeecc;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.55px;
+    line-height: 20px;
+}
+
+.title {
+    font-size: 20px;
+    color: #cabec1;
+    margin-left: 5%;
+}
+
+
+/*------------------------------------------------------------------*/
+.arrow_up {
+    margin-left: 56%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 20px 20px 20px;
+    border-color: transparent transparent rgba(177,42,75) ;
+
+}
+/*------------------------------------------------------------------*/
+/*a:link{
+    float: right;
+    color: #ffeecc;
+
+}*/
+a:visited {
+    color: #ffeecc;
+
+}
+a:hover {
+    color: #ecad2e;
+
+}

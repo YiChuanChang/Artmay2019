@@ -6,29 +6,60 @@
 	min-width: 100vw
 	display: block
 	object-fit: cover
-	background: url("../imgs/index/網頁橫幅.png") no-repeat
+	background: url("../imgs/index/網頁橫幅.jpg") no-repeat
 	background-size: cover
-	background-position: center bottom
-
+	background-position: center top
 	.main-logo-wrapper
 		width: 100%
 		position: absolute
 		display: block
 		top: 150px
-		img
-			margin: 0px auto
-			display: block
+		h1
+			color: #D8D8D8
+			text-align: center
+			font-size: 26px
+			letter-spacing: 20px
+			font-family: 'Noto Serif TC', 'serif'
+		.title-wrap
+			width: 935px
+			margin: 20px auto 10px
+			min-height: 40px
+			overflow: hidden
+			h1
+				color: #CBCCCB
+				text-align: center
+				font-size: 56px
+				font-family: 'Noto Serif TC'
+				display: inline-block
+				float: left
+				width: 800px
+				margin: 20px 10px
+				letter-spacing: 10px
+
+			img
+				float: left
+				display: block
+				&.right
+					float: right
+		h2
+			color: $main-color
+			text-align: center
+			font-size: 16px
+			letter-spacing: 5px
+
 
 	.arrow-down-wrapper
 		width: 100%
 		position: absolute
 		display: block
 		bottom: 30px
+		cursor: pointer
 		img
 			margin: 0px auto
 			display: block
 		.bounce
 			animation: bounce 2s infinite
+
 
 @keyframes bounce 
 	0%, 20%, 50%, 80%, 100%
@@ -41,24 +72,76 @@
 	width: 100vw
 	margin: 0px auto 80px
 	padding-top: 100vh
-	.title
-		width: 1120px
-		font-size: 20px
-		letter-spacing: 2px
+	.time-period
+		font-size: 40px
+		text-align: center
+		color: #c3c4c6
+		font-family: 'Noto Serif TC'
+		letter-spacing: 10px
+		margin-top: 40px
+		span
+			color: $main-color
+	.count-down
+		font-size: 28px
+		text-align: center
 		color: $main-color
-		padding-left: 50px
-		margin: 50px auto 10px
+		letter-spacing: 10px
+		margin-top: 30px
+
+	.section-sep
+		display: block
+		margin: 40px auto
+
+	.section-title
+		background-color: $main-color
+		width: 100vw
+		padding: 30px 0px
+		margin: 0px auto 60px
+		text-align: center
+		font-size: 35px
+		letter-spacing: 20px
+		color: black
+		font-family: 'Noto Serif TC'
+		.en
+			margin-top: 20px
+			font-size: 20px
+			letter-spacing: 8px
+			font-family: 'Noto Serif TC'
+
 	.activity-block-container
 		width: 1120px
 		margin: 0px auto
 		min-height: 100px
-		overflow: hidden
 		display: block
 		scroll-direction: horizontal
 		overflow: scroll
+		position: relative
 		&::-webkit-scrollbar
 			display: none
+		&:after
+			width: 30px
+			top: 0px
+			height: 100%
+			position: absolute
+			right: 0px
+			content: ""
+			background: linear-gradient(-180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 90%)
+		&:before
+			width: 30px
+			top: 0px
+			height: 100%
+			position: absolute
+			left: 0px
+			content: ""
+			background: linear-gradient(-90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 90%)
+		
 		.scroller
+			&.block-8
+				width: 2240px
+
+			&.block-5
+				width: 1400px
+
 			&.block-4
 				width: 1120px
 
@@ -139,50 +222,78 @@
 		@include transition(all 0.5s 0s)
 		&.activate
 			border: 2px solid $main-color
+			border-width: 2px 0px 3px 0px
+
 			max-height: 1200px
 
 		.detail-container
 			width: 90vw
 			margin: 25px auto
 			min-height: 100%
-			img
+			.img-wrap
 				width: 60%
+				min-height: 10px
+				overflow: hidden
+				float: left
+			img
+				width: 100%
+			a
+				float: left
+				text-decoration: none
+				color: $main-color
+				display: block
+				height: auto
+				min-width: 20px
+				overflow: hidden
+				margin: 30px 20px 30px 0px
+				transition: all 0.3s 0s
+				padding: 10px 10px
+				font-size: 20px
+				border: 4px solid $main-color
+				background: black
+				&:hover
+					color: black
+					background: $main-color
+
 			.info-container
 				width: 37%
 				float: right
 				padding-bottom: 30px
-				.join
-					// display: none
-					float: right
-					background-color: white
-					margin-top: -40px
-					img
-						float: left
-						height: 14px
-						width: 26px
-					a
-						text-decoration: none
-						color: #ddaabb
-						&:hover
-							color: #ffebcc
 				.title
-					font-size: 20px
-					letter-spacing: 1.5px
-					color: #cabec1
-					margin: 0px
+					font-size: 30px
+					letter-spacing: 5px
+					color: #c3c4c6
 					padding: 0px
-					margin-bottom: 2px
+					margin-bottom: 25px
+
+				.loca_n_time
+					margin-bottom: 25px
+					span
+						font-size: 16px
+						padding: 5px
+						letter-spacing: 5px
+						color: black
+						color: black
+						line-height: 25px
+						font-weight: 300
+						background-color: $main-color
+				.info-title
+					font-size: 16px
+					letter-spacing: 3px
+					margin-bottom: 10px
+					span
+						color: $main-color
+						font-size: 16px
+					.teacher-name
+						color: #c3c4c6
+						
+
 				.info
 					font-size: 12px
 					letter-spacing: 1.5px
-					color: #ffeecc
+					color: #c3c4c6
 					margin-bottom: 30px
 					line-height: 18px
-				.loca_n_time
-					font-size: 14px
-					letter-spacing: 2px
-					color: rgba(255, 184, 184, 0.5)
-					margin-bottom: 10px
 
 
 @media all and (max-width: 1125px)
@@ -192,7 +303,12 @@
 			padding-left: 10px
 		.activity-block-container
 			width: 840px
+			position: relative
+
 			.scroller
+				&.block-5
+					width: 1400px
+
 				&.block-4
 					width: 1120px
 
@@ -206,7 +322,7 @@
 			.detail-container
 				width: 100vw
 				margin: 5px auto
-				img
+				.img-wrap
 					width: 100%
 				.info-container
 					width: auto
@@ -221,6 +337,12 @@
 		.activity-block-container
 			width: 800px
 			.scroller
+				&.block-8
+					width: 1600px
+
+				&.block-5
+					width: 1000px
+
 				&.block-4
 					width: 800px
 
@@ -254,6 +376,12 @@
 		.activity-block-container
 			width: 360px
 			.scroller
+				&.block-8
+					width: 1440px
+
+				&.block-5
+					width: 900px
+
 				&.block-4
 					width: 720px
 

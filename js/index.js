@@ -45,16 +45,16 @@ $('body').click(function(e){
         $('#'+section+'-detail').addClass('activate');
         onclick_element = $(e.target)
         $([document.documentElement, document.body]).animate({
-            scrollTop: onclick_element.offset().top-80
+            scrollTop: onclick_element.offset().top+50
         }, 500);
-        // modify_detail($(e.target).attr('name'));
+        modify_detail($(e.target).attr('name'));
     }
 });
 
 $('.arrow-down-wrapper').click(function(){
     $([document.documentElement, document.body]).animate({
             scrollTop: $('.time-period').offset().top-80
-        }, 500);
+    }, 500);
 })
 
 function modify_detail(name){
@@ -64,16 +64,40 @@ function modify_detail(name){
     ).done( function(json) {
         // console.log(json['前夜祭：夜行實驗'].time)
 
-        object = json[name]
-        $('.activity-detail .h-image').attr('src', object.img_src);
-        $('.activity-detail .title').text(name);
+        object = json[name];
+        $('.activity-detail .main-title').text(name);
+        $('.activity-detail .loca_n_time').html('<p><span>地點：'+object.location+'</span></p><p><span>時間：'+object.time+'</span><p>');
         $('.activity-detail .info').html(object.info);
-        $('.activity-detail .loca_n_time').html('地點：'+object.location+'<br>時間：'+object.time);
         if(object.apply_link=='null'){
             $('.activity-detail .join').css('display', 'none');
         }else{
             $('.activity-detail .join').css('display', 'block');
+            $('.activity-detail .join').attr('href', object.apply_link);
+
         }
+        if(object.fb_link=='null'){
+            $('.activity-detail .fb_link').css('display', 'none');
+        }else{
+            $('.activity-detail .fb_link').attr('href', object.fb_link);
+        }
+        if(object.apply_link=='null' && object.fb_link=='null'){
+            $('.activity-detail .link-wrap').css('display', 'none');
+        }else{
+            $('.activity-detail .link-wrap').css('display', 'block');
+        }
+        if(object.teacher=='null'){
+            $('.activity-detail .teacher').css('display', 'none');
+            $('.activity-detail .teacher-info').css('display', 'none');
+        }else{
+            $('.activity-detail .teacher').css('display', 'block');
+            $('.activity-detail .teacher-info').css('display', 'block');
+            $('.activity-detail .teacher-name').html(object.teacher);
+            $('.activity-detail .teacher-info').html(object.teacher_describe);
+        }
+
+        $('.activity-detail .h-image').attr('src', object.img_src);
+        
+        
     });
 }
 var scroll_workshop = false;

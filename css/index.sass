@@ -238,9 +238,22 @@
 				font-size: 20px
 				border: 4px solid $main-color
 				background: black
+				animation: pulsing 2.5s linear infinite
 				&:hover
 					color: black
 					background: $main-color
+					animation: none
+			@keyframes pulsing 
+				0%
+					color: $main-color
+					border: 4px solid $main-color
+				50% 
+					color: #CA4F76
+					border: 4px solid #CA4F76
+				
+				100% 
+					color: $main-color
+					border: 4px solid $main-color	
 
 			.info-container
 				width: 37%
@@ -262,7 +275,6 @@
 						color: black
 						color: black
 						line-height: 25px
-						font-weight: 300
 						background-color: $main-color
 				.info-title
 					font-size: 16px

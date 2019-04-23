@@ -1,7 +1,8 @@
 body {
-  background-color: #440000;
+  background-color: black;
   font-family: "Microsoft JhengHei", "PingFangSC-Regular", "Open Sans";
-  font-weight: bold; }
+  font-weight: bold;
+  margin: 0px; }
 
 nav {
   width: 100%;
@@ -67,7 +68,7 @@ nav {
     nav .nav_item .dec {
       width: 0%;
       margin: -12px 0px 0px -6px;
-      background-color: #CC0C0C;
+      background-color: #C01249;
       position: absolute;
       height: 3px;
       -moz-transition: width 0.3s 0s;
@@ -90,7 +91,7 @@ nav {
 
 footer {
   width: 100%;
-  height: 100px;
+  min-height: 100px;
   background-color: black;
   display: block;
   position: relative;
@@ -153,7 +154,10 @@ footer {
     nav .nav_item:nth-of-type(2) {
       width: 63px;
       float: right;
-      margin-right: 15px; } }
+      margin-right: 15px; }
+
+  footer .link-wrap {
+    margin: 10px auto 10px; } }
 .member-container {
   padding-top: 150px;
   width: 1051px;
@@ -214,14 +218,14 @@ footer {
         text-align: center;
         font-family: "Microsoft JhengHei", "PingFangSC-Regular";
         font-size: 20px;
-        color: #FF3030;
+        color: #f9949e;
         letter-spacing: 1.55px; }
       .member-container .member-block-container .member-block .bg {
         width: 175px;
         text-align: center;
         font-family: "Microsoft JhengHei", "PingFangSC-Regular", "Open Sans";
         font-size: 12px;
-        color: #FF3030;
+        color: #f9949e;
         letter-spacing: 1.55px;
         margin-top: 5px; }
 

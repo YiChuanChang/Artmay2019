@@ -1,7 +1,8 @@
 body {
-  background-color: #440000;
+  background-color: black;
   font-family: "Microsoft JhengHei", "PingFangSC-Regular", "Open Sans";
-  font-weight: bold; }
+  font-weight: bold;
+  margin: 0px; }
 
 nav {
   width: 100%;
@@ -67,7 +68,7 @@ nav {
     nav .nav_item .dec {
       width: 0%;
       margin: -12px 0px 0px -6px;
-      background-color: #CC0C0C;
+      background-color: #C01249;
       position: absolute;
       height: 3px;
       -moz-transition: width 0.3s 0s;
@@ -155,11 +156,13 @@ footer {
       float: right;
       margin-right: 15px; }
 
-  footer {
-    height: 60px; } }
+  footer .link-wrap {
+    margin: 10px auto 10px; } }
 h1, h2 {
   color: #C01249;
-  text-align: center; }
+  text-align: center;
+  font-family: "Noto Serif TC", "serif" !important;
+  font-weight: bold; }
 
 h1 {
   font-size: 36px;
@@ -181,7 +184,7 @@ p {
   font-size: 14px;
   color: #C8C8C8;
   letter-spacing: 0.7px;
-  line-height: 22px;
+  line-height: 28px;
   margin: 12px auto; }
 
 .title-wrap {
@@ -191,7 +194,8 @@ p {
   color: #C01249;
   max-width: 700px;
   padding: 0px 15px;
-  margin: 40px auto 10px; }
+  margin: 40px auto 10px;
+  font-family: "Noto Serif TC", "serif"; }
 
 .content-container {
   max-width: 1200px;
@@ -206,7 +210,8 @@ p {
       letter-spacing: 0.7px;
       color: #C01249;
       padding-left: 40px;
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      font-family: "Noto Serif TC", "serif" !important; }
     .content-container .text-wrap p {
       padding: 0px 0px 0px 40px; }
   .content-container img {

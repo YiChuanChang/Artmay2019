@@ -29,6 +29,19 @@
 	-webkit-transition-delay: $delay
 	transition-delay:         $delay
 
+::-webkit-scrollbar
+	width: 10px
+/* Track */
+::-webkit-scrollbar-track 
+	background: rgba(0, 0, 0, 0)
+/* Handle */
+::-webkit-scrollbar-thumb
+	background: rgba(40,40,40,1)
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover 
+	background: rgba(20,20,20,1)
+
+
 // define colors
 $main-color: #C01249
 
@@ -40,6 +53,7 @@ body
 	font-weight: bold
 	margin: 0px
 	opacity: 0
+	overflow-x: hidden
 	@include transition(all 2s 0s)
 
 // .loading

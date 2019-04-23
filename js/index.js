@@ -28,6 +28,7 @@ $( document ).ready(function(){
 
 
 $('body').click(function(e){
+    if(!click_is_valid) return;
     $('.activity-block').removeClass('activate');
     $('.activity-detail').removeClass('activate');
     
@@ -46,22 +47,28 @@ $('body').click(function(e){
         $([document.documentElement, document.body]).animate({
             scrollTop: onclick_element.offset().top+50
         }, 500);
-        modify_detail($(e.target).attr('name'));
+        if($('#'+section+'-detail .main-title').text() == $(e.target).attr('name')){
+            $('#'+section+'-detail').removeClass('activate');
+        }else{
+            modify_detail($(e.target).attr('name'));
+        }
     }
 });
 
 $('.arrow-down-wrapper').click(function(){
-    $([document.documentElement, document.body]).animate({
-            scrollTop: $('.time-period').offset().top-80
+    // $([document.documentElement, document.body, window]).animate({
+    //         scrollTop: $('.time-period').offset().top-80
+    // }, 500);
+    // console.log('nono');
+    $('html, body').animate({
+            scrollTop: $('.count-down').offset().top-180
     }, 500);
 })
 
 function modify_detail(name){
-    console.log('hi')
     jQuery.when(
         jQuery.getJSON('assets/activities.json')
     ).done( function(json) {
-        // console.log(json['前夜祭：夜行實驗'].time)
 
         object = json[name];
         $('.activity-detail .main-title').text(name);
@@ -102,7 +109,6 @@ function modify_detail(name){
 var scroll_workshop = false;
 var activity_workshop = false;
 $(window).scroll(function() {
-    console.log(scroll_workshop)
     if(!scroll_workshop){
         scroll_workshop = scroll('workshop');
     }
@@ -118,7 +124,6 @@ function scroll(id){
     var top_of_screen = $(window).scrollTop();
     if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)){
         setTimeout(function() {
-            console.log('hi')
             $("#"+id).animate().animate({scrollLeft: 200}, 800, function(){
                 $("#"+id).animate().animate({scrollLeft: -200}, 800);
             });
@@ -128,3 +133,16 @@ function scroll(id){
     }
     return false
 }
+
+var click_is_valid = true;
+
+$('.dragscroll').on('scroll', function() {
+    click_is_valid = false;
+});
+
+    // change to correct selector of the clickable element:
+$("body").on('mousedown', function(e) {
+    click_is_valid = true;
+});
+
+

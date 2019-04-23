@@ -2,8 +2,19 @@ body {
   background-color: black;
   font-family: "Microsoft JhengHei", "PingFangSC-Regular", "Open Sans";
   font-weight: bold;
-  margin: 0px; }
+  margin: 0px;
+  opacity: 0;
+  overflow-x: hidden;
+  -moz-transition: all 2s 0s;
+  -o-transition: all 2s 0s;
+  -webkit-transition: all 2s 0s;
+  transition: all 2s 0s; }
 
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) rotate(30deg); }
+  100% {
+    transform: translateX(40%) rotate(30deg); } }
 nav {
   width: 100%;
   padding: 40px 0px;
@@ -171,12 +182,13 @@ footer {
     position: relative;
     display: block; }
   .member-container .title {
-    width: 139px;
+    width: 133px;
     height: 34px;
     margin: 0px 15px;
-    padding: 3px;
-    background-color: #CB264B;
-    color: #480402;
+    padding: 3px 0px 3px 8px;
+    background-color: lack;
+    color: #C01249;
+    border-left: solid 4px #C01249;
     float: left;
     font-size: 20px;
     font-family: "Microsoft JhengHei", "PingFangSC-Regular";
@@ -200,7 +212,7 @@ footer {
         width: 127px;
         height: 127px;
         display: block;
-        margin: 10px auto 5px; }
+        margin: 10px auto 10px; }
         .member-container .member-block-container .member-block .img-container img {
           border-radius: 50%;
           width: 127px;
@@ -245,7 +257,7 @@ footer {
   .member-container {
     width: 300px; }
     .member-container .title {
-      width: 113px; }
+      width: 108px; }
     .member-container .member-block-container .member-block {
       width: 150px; }
       .member-container .member-block-container .member-block .img-container {

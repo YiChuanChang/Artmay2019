@@ -41,6 +41,8 @@ body {
 #footer-all .artmay-name h1 {
   font-size:18pt;
   letter-spacing: 3px;
+  padding-top: 10px;
+  color: white;
 }
 
 #footer-all .artmay-name h2 {

@@ -43,6 +43,7 @@ body {
   letter-spacing: 3px;
   padding-top: 10px;
   color: white;
+  text-align: left;
 }
 
 #footer-all .artmay-name h2 {
@@ -51,6 +52,7 @@ body {
   letter-spacing: 4px;
   line-height:3;
   margin-top:5px;
+  text-align: left;
 }
 
 #footer-all .artmay-name h3 {

@@ -1,9 +1,25 @@
+::-webkit-scrollbar {
+  width: 10px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0); }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #282828; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #141414; }
+
 body {
   background-color: black;
   font-family: "Microsoft JhengHei", "PingFangSC-Regular", "Open Sans";
   font-weight: bold;
   margin: 0px;
   opacity: 0;
+  overflow-x: hidden;
   -moz-transition: all 2s 0s;
   -o-transition: all 2s 0s;
   -webkit-transition: all 2s 0s;

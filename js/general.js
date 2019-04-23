@@ -14,3 +14,9 @@ function myFunction() {
     header.classList.remove("sticky");
   }
 }
+
+
+$( document ).ready(function(){
+	console.log('hi');
+    $('body').css('opacity', '1');
+})

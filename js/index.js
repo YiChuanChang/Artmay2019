@@ -3,8 +3,7 @@ var w = window.outerWidth;
 var h = window.outerHeight;
 
 var show_detail = document.getElementsByClassName("mask");
-
-
+ 
 $( document ).ready(function(){
     var x = setInterval(function() {
         var start_day  = new Date("April 30, 2019 00:00:00").getTime();

@@ -121,6 +121,8 @@ body {
     #footer-all .link-wrap-footer{width:250px;}
     #footer-all {min-width: 200px;}
     #footer-all .artmay-name { min-width: 300px;}
+    #footer-all .artmay-name h1 {text-align: center;}
+    #footer-all .artmay-name h2 {text-align: center;}
  }
 
 /*# sourceMappingURL=index.css.map */

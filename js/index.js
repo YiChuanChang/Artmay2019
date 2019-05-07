@@ -4,27 +4,27 @@ var h = window.outerHeight;
 
 var show_detail = document.getElementsByClassName("mask");
  
-$( document ).ready(function(){
-    var x = setInterval(function() {
-        var start_day  = new Date("April 30, 2019 00:00:00").getTime();
-        var time_now = new Date().getTime();
-        distance = start_day - time_now
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        if (distance < 0) {
-            days = 0
-            hours = 0
-            minutes = 0
-            seconds = 0
-        }
-        $('.count-down #day').text(days);
-        $('.count-down #hour').text(hours);
-        $('.count-down #minute').text(minutes);
-        $('.count-down #second').text(seconds);
-    }, 1000); 
-})
+// $( document ).ready(function(){
+//     var x = setInterval(function() {
+//         var start_day  = new Date("April 30, 2019 00:00:00").getTime();
+//         var time_now = new Date().getTime();
+//         distance = start_day - time_now
+//         var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+//         var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+//         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+//         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+//         if (distance < 0) {
+//             days = 0
+//             hours = 0
+//             minutes = 0
+//             seconds = 0
+//         }
+//         $('.count-down #day').text(days);
+//         $('.count-down #hour').text(hours);
+//         $('.count-down #minute').text(minutes);
+//         $('.count-down #second').text(seconds);
+//     }, 1000); 
+// })
 
 
 $('body').click(function(e){

@@ -1,10 +1,36 @@
 @charset "UTF-8";
+::-webkit-scrollbar {
+  width: 10px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0); }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #282828; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #141414; }
+
 body {
   background-color: black;
   font-family: "Microsoft JhengHei", "PingFangSC-Regular", "Open Sans";
   font-weight: bold;
-  margin: 0px; }
+  margin: 0px;
+  opacity: 0;
+  overflow-x: hidden;
+  -moz-transition: all 2s 0s;
+  -o-transition: all 2s 0s;
+  -webkit-transition: all 2s 0s;
+  transition: all 2s 0s; }
 
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) rotate(30deg); }
+  100% {
+    transform: translateX(40%) rotate(30deg); } }
 nav {
   width: 100%;
   padding: 40px 0px;
@@ -69,7 +95,7 @@ nav {
     nav .nav_item .dec {
       width: 0%;
       margin: -12px 0px 0px -6px;
-      background-color: #CC0C0C;
+      background-color: #C01249;
       position: absolute;
       height: 3px;
       -moz-transition: width 0.3s 0s;
@@ -240,12 +266,22 @@ footer {
     margin-top: 40px; }
     .index-container .time-period span {
       color: #C01249; }
-  .index-container .count-down {
+  .index-container .count-down a {
     font-size: 28px;
     text-align: center;
     color: #C01249;
     letter-spacing: 10px;
-    margin-top: 30px; }
+    text-decoration: none;
+    display: block;
+    border: solid 4px;
+    padding: 12px 6px;
+    width: 320px;
+    margin: 30px auto;
+    background-color: black;
+    transition: all 0.5s 0s; }
+    .index-container .count-down a:hover {
+      color: black;
+      background-color: #C01249; }
   .index-container .section-sep {
     display: block;
     margin: 40px auto; }
